@@ -1,1 +1,126 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayan Agency // Global Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icons for professional menu icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Professional Header -->
+    <header>
+        <div class="logo">AYAN AGENCY</div>
+        <nav class="desktop-nav">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <button class="btn-login" onclick="openLoginModal()">Client Login</button>
+        </nav>
+        <!-- 3-Dot / Hamburger Menu Button for Mobile -->
+        <div class="menu-toggle" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown / Drawer Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#services" onclick="toggleMobileMenu()">Services</a>
+        <a href="#about" onclick="toggleMobileMenu()">About</a>
+        <a href="#portfolio" onclick="toggleMobileMenu()">Portfolio</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+        <button class="btn-login" style="width: 100%; margin-top: 10px;" onclick="openLoginModal(); toggleMobileMenu();">Client Login</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>We Build <span>Digital Experiences</span> for Global Brands</h1>
+        <p>Transforming your business ideas into high-converting, lightning-fast, and professional web applications.</p>
+        <a href="#contact" class="btn-primary">Get Started</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Core <span>Services</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>Custom, scalable, and responsive websites built using modern HTML, CSS, and JavaScript standards.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-pen-nib service-icon"></i>
+                <h3>UI/UX Design</h3>
+                <p>Clean, user-friendly layouts and high-end interfaces designed to engage international customers.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-cart-shopping service-icon"></i>
+                <h3>E-Commerce Stores</h3>
+                <p>Secure and optimized online shopping platforms built to maximize sales and boost conversions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2 class="section-title">About <span>Ayan Agency</span></h2>
+        <p class="about-desc">We are a next-gen digital agency specializing in delivering top-tier web solutions to startups, businesses, and entrepreneurs across the US and Europe. Our focus is clean code, lightning speed, and absolute security.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <h2 class="section-title">Featured <span>Work</span></h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3>Ayan Pro Calculator</h3>
+                <p>Scientific web calculator built with advanced UI and fast calculation logic.</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>Global E-Store UI</h3>
+                <p>Modern clothing brand storefront tailored for international buyers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Contact System (Connected to Formspree backend endpoint when live) -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Let's Work <span>Together</span></h2>
+        <!-- Replace action URL with your Formspree endpoint once live -->
+        <!-- Real Contact System -->
+<section class="contact-section" id="contact">
+    <h2 class="section-title">Let's Work <span>Together</span></h2>
+    <form class="contact-form" action="https://formspree.io/f/xnpnzoap" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <textarea name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+        <button type="submit" class="btn-primary" style="width: 100%; border-radius: 8px;">Send Message</button>
+    </form>
+</section>
+
+    <!-- Login Modal with Email Notification Trigger -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-title">Client Portal Login <span>🔐</span></div>
+            <div class="modal-body">
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <input type="password" id="loginPass" placeholder="Enter your password" required>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn-cancel" onclick="closeLoginModal()">Cancel</button>
+                <button class="modal-btn" onclick="handleLogin()">Secure Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ayan Agency. All rights reserved. Designed for Global Excellence.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
