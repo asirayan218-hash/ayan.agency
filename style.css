@@ -1,1 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
 
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f59e0b;
+    letter-spacing: 1px;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.desktop-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+    color: #f59e0b;
+}
+
+/* 3-Dot Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #f59e0b;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Mobile Dropdown Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #1e293b;
+    position: absolute;
+    top: 75px;
+    right: 8%;
+    width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 99;
+}
+
+.mobile-menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+}
+
+.mobile-menu a:hover {
+    color: #f59e0b;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid #f59e0b;
+    color: #f59e0b;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    background: #f59e0b;
+    color: #0f172a;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at center, #1e293b, #0f172a);
+}
+
+.hero h1 {
+    font-size: 42px;
+    max-width: 700px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #f59e0b;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #0f172a;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+.services, .portfolio-section, .about-section {
+    padding: 80px 8%;
+    background: #090d16;
+}
+
+.about-section {
+    text-align: center;
+    background: #0f172a;
+}
+
+.about-desc {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #f8fafc;
+}
+
+.section-title span {
+    color: #f59e0b;
+}
+
+.services-grid, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-card, .portfolio-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover, .portfolio-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.service-icon {
+    font-size: 28px;
+    color: #f59e0b;
+    margin-bottom: 15px;
+}
+
+.service-card h3, .portfolio-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #f59e0b;
+}
+
+.service-card p, .portfolio-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.contact-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0f172a;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea, .modal-body input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .modal-body input:focus {
+    border-color: #f59e0b;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: #1e293b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    width: 90%;
+    max-width: 360px;
+    border-radius: 20px;
+    padding: 25px;
+    color: #f8fafc;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f59e0b;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-btn {
+    background: #f59e0b;
+    color: #0f172a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-btn-cancel {
+    background: transparent;
+    color: #94a3b8;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #04060b;
+    color: #64748b;
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Media Query for Mobile Responsive View */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+}
